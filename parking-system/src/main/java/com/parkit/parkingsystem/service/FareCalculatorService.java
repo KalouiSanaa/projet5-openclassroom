@@ -20,7 +20,7 @@ public class FareCalculatorService {
         double soustraction = outHour - inHour;                          
           double duration =  ((((soustraction)/1000)/60)/60);
           
-          if(duration < 0.5) // Less than 30 min free parking fare
+          if(duration < 0.5) // moin 30 min dans le parking
           {
         	  duration = 0;
           }

@@ -58,10 +58,10 @@ public class ParkingDataBaseIT {
     	ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         parkingService.processIncomingVehicle();
         Ticket ticket = ticketDAO.getTicket("ABCDEF");
-        assertThat(ticket).isNotNull();
-        assertThat(ticket.getOutTime()).isNull();
+        assertThat(ticket).isNotNull();//ticket enregistré dans la base de données
+        assertThat(ticket.getOutTime()).isNull();// 
         assertThat(ticket.getParkingSpot()).isNotNull();
-        assertThat(ticket.getParkingSpot().isAvailable()).isFalse();
+        assertThat(ticket.getParkingSpot().isAvailable()).isFalse();//la table de stationnement est mise à jour avec la disponibilité 
     
     }
 
@@ -72,7 +72,7 @@ public class ParkingDataBaseIT {
          parkingService.processExitingVehicle();
          Thread.sleep(1000L);
          Ticket ticket = ticketDAO.getTicket("ABCDEF");
-         assertThat(ticket.getOutTime()).isNotNull();
-         assertThat(ticket.getPrice()).isGreaterThanOrEqualTo(0.0);  
+         assertThat(ticket.getOutTime()).isNotNull();// l'heure de sortie correct 
+         assertThat(ticket.getPrice()).isGreaterThanOrEqualTo(0.0); //tarif généré est correct dans la BD
         }
     }
