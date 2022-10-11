@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.2" sequence="1" timestamp="1665489487554" analysisTimestamp="1665489483592" release="">
+  <Project projectName="parking-system">
+    <Jar>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\target\classes</Jar>
+    <Jar>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\target\test-classes</Jar>
+    <AuxClasspathEntry>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\target\test-classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\mysql\mysql-connector-java\8.0.17\mysql-connector-java-8.0.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.3.2\junit-jupiter-api-5.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.3.2\junit-jupiter-engine-5.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\assertj\assertj-core\3.11.1\assertj-core-3.11.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\mockito\mockito-junit-jupiter\2.23.4\mockito-junit-jupiter-2.23.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\mockito\mockito-core\2.23.4\mockito-core-2.23.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy\1.9.3\byte-buddy-1.9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy-agent\1.9.3\byte-buddy-agent-1.9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\jacoco\jacoco-maven-plugin\0.8.5\jacoco-maven-plugin-0.8.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-aether-provider\3.0\maven-aether-provider-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.14\plexus-interpolation-1.14.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.22\plexus-utils-3.0.22.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\shared\file-management\1.2.1\file-management-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\shared\maven-shared-io\1.1\maven-shared-io-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-artifact-manager\2.0.2\maven-artifact-manager-2.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-alpha-6\wagon-provider-api-1.0-alpha-6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9\plexus-container-default-1.0-alpha-9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\reporting\maven-reporting-api\3.0\maven-reporting-api-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-sink-api\1.0\doxia-sink-api-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\reporting\maven-reporting-impl\2.1\maven-reporting-impl-2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-project\2.0.10\maven-project-2.0.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-profile\2.0.10\maven-profile-2.0.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\maven-plugin-registry\2.0.10\maven-plugin-registry-2.0.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-core\1.1.2\doxia-core-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-logging-api\1.1.2\doxia-logging-api-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\xerces\xercesImpl\2.8.1\xercesImpl-2.8.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-codec\commons-codec\1.2\commons-codec-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-site-renderer\1.1.2\doxia-site-renderer-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-decoration-model\1.1.2\doxia-decoration-model-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-module-xhtml\1.1.2\doxia-module-xhtml-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\maven\doxia\doxia-module-fml\1.1.2\doxia-module-fml-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-i18n\1.0-beta-7\plexus-i18n-1.0-beta-7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\codehaus\plexus\plexus-velocity\1.1.7\plexus-velocity-1.1.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\apache\velocity\velocity\1.5\velocity-1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-collections\commons-collections\3.2\commons-collections-3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-validator\commons-validator\1.2.0\commons-validator-1.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-digester\commons-digester\1.6\commons-digester-1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\commons-logging\commons-logging\1.0.4\commons-logging-1.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\oro\oro\2.0.8\oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\jacoco\org.jacoco.agent\0.8.5\org.jacoco.agent-0.8.5-runtime.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\jacoco\org.jacoco.core\0.8.5\org.jacoco.core-0.8.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\ow2\asm\asm\7.2\asm-7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\ow2\asm\asm-commons\7.2\asm-commons-7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\ow2\asm\asm-analysis\7.2\asm-analysis-7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\ow2\asm\asm-tree\7.2\asm-tree-7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\HP\.m2\repository\org\jacoco\org.jacoco.report\0.8.5\org.jacoco.report-0.8.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_311\lib\ext\mysql-connector-java-8.0.17.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-18\lib\jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\src\main\java</SrcDir>
+    <SrcDir>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\src\main\resources</SrcDir>
+    <SrcDir>C:\Users\HP\Desktop\p5_kaloui_sanaa\parking-system\src\test\java</SrcDir>
+  </Project>
+  <BugInstance type="DMI_CONSTANT_DB_PASSWORD" priority="2" rank="7" abbrev="Dm" category="SECURITY" first="1">
+    <Class classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig">
+      <SourceLine classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" sourcefile="DataBaseTestConfig.java" sourcepath="com/parkit/parkingsystem/integration/config/DataBaseTestConfig.java"/>
+    </Class>
+    <Method classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" name="getConnection" signature="()Ljava/sql/Connection;" isStatic="false">
+      <SourceLine classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" start="14" end="17" startBytecode="0" endBytecode="10" sourcefile="DataBaseTestConfig.java" sourcepath="com/parkit/parkingsystem/integration/config/DataBaseTestConfig.java"/>
+    </Method>
+    <SourceLine classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" start="17" end="17" startBytecode="22" endBytecode="22" sourcefile="DataBaseTestConfig.java" sourcepath="com/parkit/parkingsystem/integration/config/DataBaseTestConfig.java"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" start="17" end="17" startBytecode="22" endBytecode="22" sourcefile="DataBaseTestConfig.java" sourcepath="com/parkit/parkingsystem/integration/config/DataBaseTestConfig.java"/>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" first="1">
+    <Class classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService">
+      <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+    </Class>
+    <Method classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" name="clearDataBaseEntries" signature="()V" isStatic="false">
+      <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="12" end="27" startBytecode="0" endBytecode="239" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement" sourcefile="Statement.java" sourcepath="java/sql/Statement.java"/>
+    </Class>
+    <Int value="2" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="17" end="17" startBytecode="13" endBytecode="13" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="20" end="20" startBytecode="24" endBytecode="24" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="20" end="20" startBytecode="27" endBytecode="27" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="25" end="25" startBytecode="38" endBytecode="38" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="26" end="26" startBytecode="46" endBytecode="46" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="27" end="27" startBytecode="76" endBytecode="76" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 2}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" rank="16" abbrev="ODR" category="BAD_PRACTICE" first="1">
+    <Class classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService">
+      <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+    </Class>
+    <Method classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" name="clearDataBaseEntries" signature="()V" isStatic="false">
+      <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="12" end="27" startBytecode="0" endBytecode="36" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement" start="1266" end="1319" sourcefile="PreparedStatement.java" sourcepath="java/sql/PreparedStatement.java"/>
+    </Type>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="17" end="17" startBytecode="13" endBytecode="13" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+    <SourceLine classname="com.parkit.parkingsystem.integration.service.DataBasePrepareService" start="17" end="17" startBytecode="13" endBytecode="13" sourcefile="DataBasePrepareService.java" sourcepath="com/parkit/parkingsystem/integration/service/DataBasePrepareService.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 11 Oct 2022 13:56:20 +0200" total_classes="19" referenced_classes="88" total_bugs="3" total_size="863" num_packages="10" java_version="11.0.16.1" vm_version="11.0.16.1+1" cpu_seconds="23.31" clock_seconds="44.65" peak_mbytes="664.01" alloc_mbytes="2048.00" gc_seconds="0.26" priority_2="3">
+    <PackageStats package="com.parkit.parkingsystem" total_bugs="0" total_types="3" total_size="276">
+      <ClassStats class="com.parkit.parkingsystem.App" sourceFile="App.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.FareCalculatorServiceTest" sourceFile="FareCalculatorServiceTest.java" interface="false" size="143" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.ParkingServiceTest" sourceFile="ParkingServiceTest.java" interface="false" size="123" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.config" total_bugs="0" total_types="1" total_size="40">
+      <ClassStats class="com.parkit.parkingsystem.config.DataBaseConfig" sourceFile="DataBaseConfig.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.constants" total_bugs="0" total_types="3" total_size="30">
+      <ClassStats class="com.parkit.parkingsystem.constants.DBConstants" sourceFile="DBConstants.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.constants.Fare" sourceFile="Fare.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.constants.ParkingType" sourceFile="ParkingType.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.dao" total_bugs="0" total_types="2" total_size="179">
+      <ClassStats class="com.parkit.parkingsystem.dao.ParkingSpotDAO" sourceFile="ParkingSpotDAO.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.dao.TicketDAO" sourceFile="TicketDAO.java" interface="false" size="135" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.integration" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="com.parkit.parkingsystem.integration.ParkingDataBaseIT" sourceFile="ParkingDataBaseIT.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.integration.config" total_bugs="1" total_types="1" total_size="34" priority_2="1">
+      <ClassStats class="com.parkit.parkingsystem.integration.config.DataBaseTestConfig" sourceFile="DataBaseTestConfig.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.integration.service" total_bugs="2" total_types="1" total_size="15" priority_2="2">
+      <ClassStats class="com.parkit.parkingsystem.integration.service.DataBasePrepareService" sourceFile="DataBasePrepareService.java" interface="false" size="15" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.model" total_bugs="0" total_types="2" total_size="71">
+      <ClassStats class="com.parkit.parkingsystem.model.ParkingSpot" sourceFile="ParkingSpot.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.model.Ticket" sourceFile="Ticket.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.service" total_bugs="0" total_types="4" total_size="151">
+      <ClassStats class="com.parkit.parkingsystem.service.FareCalculatorService" sourceFile="FareCalculatorService.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.service.FareCalculatorService$1" sourceFile="FareCalculatorService.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.service.InteractiveShell" sourceFile="InteractiveShell.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.parkit.parkingsystem.service.ParkingService" sourceFile="ParkingService.java" interface="false" size="88" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.parkit.parkingsystem.util" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="com.parkit.parkingsystem.util.InputReaderUtil" sourceFile="InputReaderUtil.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="899" invocations="834" avgMicrosecondsPerInvocation="1078" maxMicrosecondsPerInvocation="68024" standardDeviationMicrosecondsPerInvocation="3454"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="459" invocations="2" avgMicrosecondsPerInvocation="229953" maxMicrosecondsPerInvocation="397515" standardDeviationMicrosecondsPerInvocation="167562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="348" invocations="840" avgMicrosecondsPerInvocation="414" maxMicrosecondsPerInvocation="19096" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="251" invocations="88" avgMicrosecondsPerInvocation="2860" maxMicrosecondsPerInvocation="57851" standardDeviationMicrosecondsPerInvocation="7998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="187" invocations="88" avgMicrosecondsPerInvocation="2135" maxMicrosecondsPerInvocation="42577" standardDeviationMicrosecondsPerInvocation="5135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOverridableMethodCall" totalMilliseconds="116" invocations="19" avgMicrosecondsPerInvocation="6123" maxMicrosecondsPerInvocation="108684" standardDeviationMicrosecondsPerInvocation="24180"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="103" invocations="109" avgMicrosecondsPerInvocation="947" maxMicrosecondsPerInvocation="4736" standardDeviationMicrosecondsPerInvocation="1162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="92" invocations="796" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="4954" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="82" invocations="125" avgMicrosecondsPerInvocation="656" maxMicrosecondsPerInvocation="2829" standardDeviationMicrosecondsPerInvocation="705"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="78" invocations="234" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="11420" standardDeviationMicrosecondsPerInvocation="808"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="75" invocations="109" avgMicrosecondsPerInvocation="692" maxMicrosecondsPerInvocation="3695" standardDeviationMicrosecondsPerInvocation="761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="75" invocations="109" avgMicrosecondsPerInvocation="690" maxMicrosecondsPerInvocation="5257" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="68" invocations="119" avgMicrosecondsPerInvocation="575" maxMicrosecondsPerInvocation="3491" standardDeviationMicrosecondsPerInvocation="687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="64" invocations="109" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="4272" standardDeviationMicrosecondsPerInvocation="637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="63" invocations="94" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="5603" standardDeviationMicrosecondsPerInvocation="1050"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1665489487554" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>
