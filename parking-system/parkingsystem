@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.2" sequence="0" timestamp="-1" analysisTimestamp="1665317849872" release="">
+  <Project></Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 9 Oct 2022 14:17:29 +0200" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="11.0.16.1" vm_version="11.0.16.1+1" cpu_seconds="0.00" clock_seconds="0.01" peak_mbytes="770.82" alloc_mbytes="2048.00" gc_seconds="0.00">
+    <FindBugsProfile></FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
