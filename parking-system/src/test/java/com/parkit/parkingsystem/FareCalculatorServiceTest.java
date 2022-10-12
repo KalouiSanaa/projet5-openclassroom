@@ -126,9 +126,9 @@ public class FareCalculatorServiceTest {
     }
     //
     @Test
-    public void calculateFareCarWithLessThan30minParkingTime(){
+    public void calculateFareCarWithLessThanAhalfHourParkingTime(){
         Date inTime = new Date();
-        inTime.setTime( System.currentTimeMillis() - (  25* 60 * 1000) ); //25 min doit donnes un tarif gratuit
+        inTime.setTime( System.currentTimeMillis() - (  25* 60 * 1000) ); //25 min doit donner un tarif gratuit
         Date outTime = new Date();
         ParkingSpot parkingSpot = new ParkingSpot(1, ParkingType.CAR,false);
 
@@ -140,7 +140,7 @@ public class FareCalculatorServiceTest {
     }
     //
     @Test
-    public void calculateFareRecurrentCarWithMoreThanADayParkingTime(){ //24 heures de stationnement  nous donne 24 * tarif par heur
+    public void calculateFareRecurrentCarWithMoreThanA24hParkingTime(){ //24 heures de stationnement  nous donne 24 * tarif par heur
         
         Date inTime = new Date();
         inTime.setTime( System.currentTimeMillis() - (  24 * 60 * 60 * 1000) ); //(currentTimeMillis renvoi l heure en milliseconde)
@@ -156,7 +156,7 @@ public class FareCalculatorServiceTest {
     }
     	//
     @Test
-    public void calculateFareRecurrentBikeWithLessThanOneHourParkingTime(){
+    public void calculateFareRecurrentBikeWithLessThan60MinutesParkingTime(){
         Date inTime = new Date();
         inTime.setTime( System.currentTimeMillis() - (  45 * 60 * 1000) ); //45 minutes de stationnement doit donner3/4th tarif parking 
         Date outTime = new Date();

@@ -72,7 +72,7 @@ public class ParkingDataBaseIT {
          parkingService.processExitingVehicle();
          Thread.sleep(1000L);
          Ticket ticket = ticketDAO.getTicket("ABCDEF");
-         assertThat(ticket.getOutTime()).isNotNull();// l'heure de sortie correct 
+         assertThat(ticket.getOutTime()).isNotNull();// l'heure de sortie est bien enregistre
          assertThat(ticket.getPrice()).isGreaterThanOrEqualTo(0.0); //tarif généré est correcte dans la BD
         }
     }

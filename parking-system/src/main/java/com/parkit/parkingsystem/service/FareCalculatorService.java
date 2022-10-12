@@ -4,6 +4,9 @@ import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
 public class FareCalculatorService {
+    private static final double A_HALF_HOUR = 0.5;
+    private static final int ONE_HOUR_IN_MILLISECONDS = 60 * 60 * 1000;
+
 
     public void calculateFare(Ticket ticket, boolean isUserRecurrent){
         if( (ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime())) ){
@@ -17,10 +20,11 @@ public class FareCalculatorService {
         //TODO: Some tests are failing here. Need to check if this logic is correct
         
 //
-        double soustraction = outHour - inHour;                          
-          double duration =  ((((soustraction)/1000)/60)/60);
+        double soustraction = outHour - inHour; 
+        
+          double duration =  (soustraction/ONE_HOUR_IN_MILLISECONDS);
           
-          if(duration < 0.5) // moin 30 min dans le parking
+          if(duration < A_HALF_HOUR) // moin 30 min dans le parking
           {
         	  duration = 0;
           }
