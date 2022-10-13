@@ -19,6 +19,10 @@ import static org.mockito.Mockito.when;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -58,11 +62,10 @@ public class ParkingDataBaseIT {
     	ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         parkingService.processIncomingVehicle();
         Ticket ticket = ticketDAO.getTicket("ABCDEF");
-        assertThat(ticket).isNotNull();//ticket enregistré dans la base de données
-        assertThat(ticket.getOutTime()).isNull();// 
-        assertThat(ticket.getParkingSpot()).isNotNull();
-        assertThat(ticket.getParkingSpot().isAvailable()).isFalse();//la table parcking est mise à jour avec la disponibilité 
-    
+        assertNotNull(ticket);//ticket enregistré dans la base de données
+        assertNull(ticket.getOutTime());
+        assertNotNull(ticket.getParkingSpot());
+        assertFalse(ticket.getParkingSpot().isAvailable());	////la table parcking est mise à jour avec la disponibilité 
     }
 
     @Test
@@ -72,7 +75,9 @@ public class ParkingDataBaseIT {
          parkingService.processExitingVehicle();
          Thread.sleep(1000L);
          Ticket ticket = ticketDAO.getTicket("ABCDEF");
-         assertThat(ticket.getOutTime()).isNotNull();// l'heure de sortie est bien enregistre
-         assertThat(ticket.getPrice()).isGreaterThanOrEqualTo(0.0); //tarif généré est correcte dans la BD
+         assertNotNull(ticket.getOutTime());// l'heure de sortie est bien enregistre
+       assertThat(ticket.getPrice()).isGreaterThanOrEqualTo(0.0); //tarif généré est correcte dans la BD
+         
+         
         }
     }
