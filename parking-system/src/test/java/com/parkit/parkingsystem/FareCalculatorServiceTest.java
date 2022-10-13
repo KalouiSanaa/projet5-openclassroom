@@ -166,7 +166,7 @@ public class FareCalculatorServiceTest {
         ticket.setOutTime(outTime);
         ticket.setParkingSpot(parkingSpot);
         fareCalculatorService.calculateFare(ticket,true);
-        assertEquals(Math.round(0.95*0.75*Fare.BIKE_RATE_PER_HOUR*100.0)/100.0, ticket.getPrice() );
+        assertEquals(Math.round(0.95*0.75*Fare.BIKE_RATE_PER_HOUR*100.0)/100.0, ticket.getPrice() );//arrondir à deux chiffres après la virgule
         
     }
     //

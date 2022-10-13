@@ -51,7 +51,7 @@ public class TicketDAO {
         
         try {
             con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.GET_TICKET_WITH_OUT_TIME_NULL);
+            ps = con.prepareStatement(DBConstants.GET_TICKET_OUT_TIME_NULL);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             ps.setString(1,vehicleRegNumber);
             rs = ps.executeQuery();  
@@ -153,7 +153,7 @@ public class TicketDAO {
         ResultSet rs = null;
         try {
             con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.IS_STILL_INSIDE_PARKING);
+            ps = con.prepareStatement(DBConstants.STILL_INSIDE_PARKING);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             ps.setString(1,vehicleRegNumber);
             rs = ps.executeQuery();  
