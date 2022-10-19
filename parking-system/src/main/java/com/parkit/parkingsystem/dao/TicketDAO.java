@@ -19,12 +19,12 @@ public class TicketDAO {
 
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
-    public boolean saveTicket(Ticket ticket){
+    @SuppressWarnings("finally")
+	public boolean saveTicket(Ticket ticket){
         Connection con = null;
-        PreparedStatement ps = null;
         try {
             con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.SAVE_TICKET);
+            PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             //ps.setInt(1,ticket.getId());
             ps.setInt(1,ticket.getParkingSpot().getId());
@@ -35,26 +35,22 @@ public class TicketDAO {
             return ps.execute();
         }catch (Exception ex){
             logger.error("Error fetching next available slot",ex);
-            return false;
         }finally {
-        	dataBaseConfig.closePreparedStatement(ps);
             dataBaseConfig.closeConnection(con);
-           
+            return false;
         }
     }
 
-    public Ticket getTicketWithOutTimeNull(String vehicleRegNumber) {
+    @SuppressWarnings("finally")
+	public Ticket getTicket(String vehicleRegNumber) {
         Connection con = null;
         Ticket ticket = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        
         try {
             con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.GET_TICKET_OUT_TIME_NULL);
+            PreparedStatement ps = con.prepareStatement(DBConstants.GET_TICKET);
             //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
             ps.setString(1,vehicleRegNumber);
-            rs = ps.executeQuery();  
+            ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 ticket = new Ticket();
                 ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)),false);
@@ -70,134 +66,79 @@ public class TicketDAO {
         }catch (Exception ex){
             logger.error("Error fetching next available slot",ex);
         }finally {
-        	dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-            dataBaseConfig.closeConnection(con);        
-            
+            dataBaseConfig.closeConnection(con);
+            return ticket;
         }
-        return ticket;
     }
-    /**********************************************************************************/
-    public Ticket getTicket(String vehicleRegNumber) {
-        Connection con = null;
-        Ticket ticket = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        
-        try {
-            con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.GET_TICKET);
-            //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            ps.setString(1,vehicleRegNumber);
-            rs = ps.executeQuery();  
-            if(rs.next()){
-                ticket = new Ticket();
-                ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)),false);
-                ticket.setParkingSpot(parkingSpot);
-                ticket.setId(rs.getInt(2));
-                ticket.setVehicleRegNumber(vehicleRegNumber);
-                ticket.setPrice(rs.getDouble(3));
-                ticket.setInTime(rs.getTimestamp(4));
-                ticket.setOutTime(rs.getTimestamp(5));
-            }
-            dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-        }catch (Exception ex){
-            logger.error("Error fetching next available slot",ex);
-        }finally {
-        	dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-            dataBaseConfig.closeConnection(con);         
-            
-        }
-        return ticket;
-    }
-    
-    /************************************************************************************************/
-    public boolean isVehicleRecurrent(String vehicleRegNumber) {
-        Connection con = null;
-
-        boolean vehicleIsRecurrent = false;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-            con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.IS_RECURRENT);
-            //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            ps.setString(1,vehicleRegNumber);
-            rs = ps.executeQuery();  
-            if(rs.next()){                         // if( rs.next()==true ) { userrecurent == true }
-            	vehicleIsRecurrent = true;
-            }
-            dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-        }catch (Exception ex){
-            logger.error("Error reading if user is recurrent",ex);
-        }finally {
-        	
-            dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-            dataBaseConfig.closeConnection(con);         
-            
-        }
-        return vehicleIsRecurrent;
-    }
-    
-    /*********************************************************************************************/
-    
-    public boolean isVehicleInTheParkingYet(String vehicleRegNumber) {
-        Connection con = null;
-
-        boolean isVehicleInTheParkingYet = false;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-            con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.STILL_INSIDE_PARKING);
-            //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-            ps.setString(1,vehicleRegNumber);
-            rs = ps.executeQuery();  
-            if(rs.next()){
-            	isVehicleInTheParkingYet = true;
-            }
-            dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-        }catch (Exception ex){
-            logger.error("Error reading if user is recurrent",ex);
-        }finally {
-        	
-            dataBaseConfig.closeResultSet(rs);
-            dataBaseConfig.closePreparedStatement(ps);
-            dataBaseConfig.closeConnection(con);         
-            
-        }
-        return isVehicleInTheParkingYet;
-    }
-    
-    /*********************************************************************************************/
 
     public boolean updateTicket(Ticket ticket) {
         Connection con = null;
-        PreparedStatement ps = null;
-       
         try {
             con = dataBaseConfig.getConnection();
-            ps = con.prepareStatement(DBConstants.UPDATE_TICKET);
+            PreparedStatement ps = con.prepareStatement(DBConstants.UPDATE_TICKET);
             ps.setDouble(1, ticket.getPrice());
             ps.setTimestamp(2, new Timestamp(ticket.getOutTime().getTime()));
             ps.setInt(3,ticket.getId());
             ps.execute();
-            
             return true;
         }catch (Exception ex){
             logger.error("Error saving ticket info",ex);
-         
         }finally {
-        	dataBaseConfig.closePreparedStatement(ps);
             dataBaseConfig.closeConnection(con);
         }
-       
-       return false;
+        return false;
+    }
+
+
+public boolean recurrentUsers (String vehiculeNumber) {
+	
+    boolean recurent= false;
+    Connection con = null;
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+    try {
+        con = dataBaseConfig.getConnection();
+      ps = con.prepareStatement(DBConstants.RECURENT_USERS);
+        ps.setString(1,vehiculeNumber);
+       rs = ps.executeQuery();
+        if (rs.next()) {
+            if(rs.getString("VEHICLE_REG_NUMBER").equalsIgnoreCase(vehiculeNumber)){
+               recurent= true;
+                System.out.println("bienvenue vous avez le droit a  5% de reductions");
+        }
+        }
+        dataBaseConfig.closeResultSet(rs);
+        dataBaseConfig.closePreparedStatement(ps);
+    }catch (Exception ex){
+        logger.error("Error can't define regular user ",ex);
+    }finally {
+        dataBaseConfig.closeConnection(con);         
         
     }
+    return recurent;
+}
+
+
+public boolean alreadyAtParking (String vehiculeRegNumber) {
+    boolean inParking = false;
+    Connection con = null;
+    try {
+        con = dataBaseConfig.getConnection();
+        PreparedStatement ps = con.prepareStatement(DBConstants.IN_PARKING);
+        ps.setString(1, vehiculeRegNumber);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            if(!rs.getBoolean("AVAILABLE")){
+                inParking = true;
+            }
+        }
+        dataBaseConfig.closeResultSet(rs);
+        dataBaseConfig.closePreparedStatement(ps);
+    }catch (Exception ex){
+        logger.error("Error can't define if vehicle is already in parking ",ex);
+    }finally {
+        dataBaseConfig.closeConnection(con);
+    }
+    return inParking;
+}
 }

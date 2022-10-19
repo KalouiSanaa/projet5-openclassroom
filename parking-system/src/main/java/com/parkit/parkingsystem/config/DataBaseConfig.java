@@ -2,48 +2,50 @@ package com.parkit.parkingsystem.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-//import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-//import java.security.KeyStore;
 import java.sql.*;
 import java.util.Properties;
 
 public class DataBaseConfig {
-	
-	
+
     private static final Logger logger = LogManager.getLogger("DataBaseConfig");
 
-    public Connection getConnection() throws ClassNotFoundException, SQLException {
+    public Connection getConnection() throws ClassNotFoundException, SQLException, Exception {
         logger.info("Create DB connection");
-        Class.forName("com.mysql.cj.jdbc.Driver");
-  
-        Properties prop = new Properties();
-        try (InputStream input = DataBaseConfig.class.getClassLoader().getResourceAsStream("config.properties")) {
+        Properties config = new Properties();
+        try (InputStream urs = DataBaseConfig.class.getClassLoader().getResourceAsStream("dbpro.properties")) {
+    	  
+      
+       Class.forName("com.mysql.cj.jdbc.Driver");
 
-
-            // load a properties file
-            prop.load(input);
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+       config.load(urs);
+       
+      }
+      
+      
+      catch(IOException ex) {
+    	  ex.getStackTrace();
+    	  
+      }
+      String url = config.getProperty("db.url");
+      String users = config.getProperty("db.user");
+      String passwords = config.getProperty("db.password");
         
-        return DriverManager.getConnection(prop.getProperty("db.url"),prop.getProperty("db.user"),prop.getProperty("db.password"));
+        return DriverManager.getConnection(url, users ,passwords);
     }
 
-    public void closeConnection(Connection con){
-        if(con!=null){
+    public void closeConnection(Connection con) {
+    	
+    	if(con!=null){
             try {
                 con.close();
-                logger.info("Closing DB connection");
+                logger.info("Closing connection");
             } catch (SQLException e) {
                 logger.error("Error while closing connection",e);
             }
         }
     }
-
     public void closePreparedStatement(PreparedStatement ps) {
         if(ps!=null){
             try {

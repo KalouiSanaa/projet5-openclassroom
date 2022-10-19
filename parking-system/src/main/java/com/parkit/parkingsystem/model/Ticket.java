@@ -1,8 +1,5 @@
 package com.parkit.parkingsystem.model;
-
-
 import java.util.Date;
-
 
 public class Ticket {
     private int id;
@@ -11,6 +8,8 @@ public class Ticket {
     private double price;
     private Date inTime;
     private Date outTime;
+    private boolean recurent;
+    private boolean atParking;
 
 
     public int getId() {
@@ -22,12 +21,11 @@ public class Ticket {
     }
 
     public ParkingSpot getParkingSpot() {
-        return parkingSpot == null ? null :  new ParkingSpot( parkingSpot.getId(), parkingSpot.getParkingType(), parkingSpot.isAvailable());// == null ? null : (ParkingSpot)parkingSpot.clone();
+        return parkingSpot;
     }
 
     public void setParkingSpot(ParkingSpot parkingSpot) {
-    
-        this.parkingSpot = parkingSpot == null ? null :  new ParkingSpot( parkingSpot.getId(), parkingSpot.getParkingType(), parkingSpot.isAvailable());
+        this.parkingSpot = parkingSpot;
     }
 
     public String getVehicleRegNumber() {
@@ -47,25 +45,34 @@ public class Ticket {
     }
 
     public Date getInTime() {
-    
-       return this.inTime == null ? null : new Date(inTime.getTime()); 
-    
+        return inTime;
     }
 
     public void setInTime(Date inTime) {
-    	
-        this.inTime = inTime == null ? null : new Date(inTime.getTime()); 
+        this.inTime = inTime;
     }
 
     public Date getOutTime() {
-  
-    	
-    	return this.outTime == null ? null : new Date(outTime.getTime());
-      
+        return outTime;
     }
 
     public void setOutTime(Date outTime) {
-    	
-        this.outTime = outTime == null ? null : new Date(outTime.getTime());
+        this.outTime = outTime;
     }
+
+	public boolean getRecurent() {
+		return recurent;
+	}
+
+	public void setRecurent(boolean recurent) {
+		this.recurent = recurent;
+	}
+
+	public boolean getAtParking() {
+		return atParking;
+	}
+
+	public void setAtParking(boolean atParking) {
+		this.atParking = atParking;
+	}
 }

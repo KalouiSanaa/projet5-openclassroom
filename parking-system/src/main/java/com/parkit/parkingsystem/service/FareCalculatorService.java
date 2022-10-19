@@ -4,46 +4,50 @@ import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
 
 public class FareCalculatorService {
-    private static final double A_HALF_HOUR = 0.5;
-    private static final int ONE_HOUR_IN_MILLISECONDS = 60 * 60 * 1000;
-
-
-    public void calculateFare(Ticket ticket, boolean isUserRecurrent){
+	private static final int HOURMILLISECONDS = 60 * 60 * 1000;
+    private static final double HALF_HOUR = 0.5;
+    
+    public void calculateFare(Ticket ticket,boolean Recurrent){
+    	
         if( (ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime())) ){
             throw new IllegalArgumentException("Out time provided is incorrect:"+ticket.getOutTime().toString());
         }
-  
-        long inHour = ticket.getInTime().getTime();   
 
-        long outHour = ticket.getOutTime().getTime(); 
+       long inHour = ticket.getInTime().getTime();
+        long outHour = ticket.getOutTime().getTime();
 
         //TODO: Some tests are failing here. Need to check if this logic is correct
-        
-//
-        double soustraction = outHour - inHour; 
-        
-          double duration =  (soustraction/ONE_HOUR_IN_MILLISECONDS);
-          
-          if(duration < A_HALF_HOUR) // moin 30 min dans le parking
+       long duration = outHour - inHour;
+       
+       double  TIME= duration /HOURMILLISECONDS;
+       //Recurrent = false;
+       if(TIME<HALF_HOUR) {
+              
+    	   TIME=0;
+	
+                 }
+
+       if(Recurrent == true) 
           {
-        	  duration = 0;
-          }
-          else if(isUserRecurrent == true) // 5% discount
-          {
-        	  duration = (duration) - (0.05*duration);
-        	 
-          } 
-       //
-        switch (ticket.getParkingSpot().getParkingType()){     
+	TIME = (long) ((TIME) - (0.05*TIME));
+	 
+                } 
+        switch (ticket.getParkingSpot().getParkingType()){
             case CAR: {
-                ticket.setPrice(Math.round(duration * Fare.CAR_RATE_PER_HOUR*100.0)/100.0);	// arrondir à deux chiffres après la virgule
-                System.out.println(Math.round(duration * Fare.CAR_RATE_PER_HOUR*100.0/100.0));
-                break;
+                double price =TIME * Fare.CAR_RATE_PER_HOUR;
+               ticket.setPrice( Math.round((price)*100.0)/100.0);
+              ticket.setPrice( Math.round((price)*100.0)/100.0);
+          
+            	     break;  
+   
             }
             case BIKE: {
-                ticket.setPrice((double)Math.round(duration * Fare.BIKE_RATE_PER_HOUR*100.0)/100.0);
-                break;
+                double price =TIME * Fare.BIKE_RATE_PER_HOUR;
+                ticket.setPrice( Math.round((price)*100.0)/100.0);
+        
+           	     break;  
             }
+      
             default: throw new IllegalArgumentException("Unkown Parking Type");
         }
     }
